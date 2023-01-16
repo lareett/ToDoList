@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto To Do List</title>
+    <!--CSS do Projeto-->
+    <link rel="stylesheet" href="/css/style.css">
+    <!--JS do Projeto-->
+    <!--Atributo DEFER que faz com que os arquivos sejam carregados depois do html ou pode-se colocar depois do body-->
+    <script src="/js/script.js" defer></script>
+    <!--Google Fonts-->
+
+</head>
+
+<body>
+    <div class="todolist-container">
+        <div class="formcontainer">
+            
+            <div id="todoForm">
+
+                <header>
+                    <h3>To Do List</h3>
+                </header>
+
+                <p>Digite sua tarefa:</p>
+                <div class="Form">
+                    <input type="text" id="inputTarefa" placeholder="o que você vai fazer hoje?">
+
+                    <button type="submit" onclick="addTarefa()" id="btnAdd"> <img src="./img/adicionar.png"></button>
+                </div>
+                
+                <div class="form-edit">
+                    <p>Edite sua tarefa:</p>
+                    <div class="Form">
+                        <input type="text" id="edit">
+                        <button type="submit"><img src="./img/editar.png"></button>
+                    </div>
+                </div>
+                    
+                <p>Pesquisar:</p>
+                <div class="Form">
+                    <input type="text" id="search" placeholder="busque pela tarefa...">
+                    <button id="clear"><img src="./img/buscar.png"></button>
+                </div>
+                
+
+                <div id="filter">
+
+                    <p>Filtrar:</p>
+                    
+                    <select id="filter-selected">
+                        <option value="all">Todos</option>
+                        <option value="done">Feitos</option>
+                        <option value="todo">Em andamento</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div id="todolist">
+            
+            <div id="orderlist">
+                
+                <div class="containerlist done">
+                    <h3>Essa tarefa está terminada</h3>
+                    <button class="finish">Terminado</button>
+                    <button class="edit-todo">Editar</button>
+                    <button class="remove-todo">Cancelar</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

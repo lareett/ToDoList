@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto&family=Roboto+Mono:wght@300;400&family=Sevillana&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --darkcolor: #1a1729;
+    --seconddarkcolor: #040410;
+    --whitecolor: #fefefe;
+    --whitetransparentcolor: #fefefe2a;
+    --graycolor: #979797;
+}
+
+body{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.todolist-container{
+    display: flex;
+   /*border: 1px solid black;*/
+
+    width: auto;
+    height: 100vh;
+
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.formcontainer{
+    display: flex;
+    /*border: 1px solid black;*/
+
+    width: 38%;
+    height: 90%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    border-radius: 50px;
+}
+
+header{
+    /*border: 1px solid black;*/
+
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--whitecolor);
+
+}
+
+header h3{
+    color: var(--whitecolor);
+    font-size: 38pt;
+    font-family: 'Grand Hotel', cursive;
+    font-weight: 100;
+
+    /*border: 1px solid black;*/
+}
+
+#todoForm{
+    /*border: 1px solid black;*/
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80%;
+
+    padding: 0;
+}
+
+#todoForm p{
+    color: var(--whitecolor);
+    font-family: 'Roboto Mono', monospace;
+}
+
+#todoForm button{
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+
+    width: 3.3rem;
+    height: 3.3rem;
+
+    background: transparent;
+    color: var(--whitecolor);
+    border: 3px solid var(--whitecolor);
+
+    transition: 0.5s;
+
+}
+
+#todoForm button img{
+    width: 25px;
+}
+
+#todoForm button:hover{
+    background-color: var(--darkcolor);
+}
+
+/* Esconder Editar*/
+
+.form-edit{
+    /*border: 1px solid black;*/
+    width: 100%;
+
+    /*mudar para none para esconder*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.Form{
+    /*border: 1px solid black;*/
+
+    display: flex;
+    width: 100%;
+    height: 70px;
+
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+    margin-bottom: 15px;
+    padding-left: 60px;
+}
+
+input {
+    display: flex;
+    border: 3px solid var(--whitecolor);
+    background: transparent;
+
+    color: var(--whitecolor);
+
+    border-radius: 50px;
+
+    width: 80%;
+    height: 80%;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+
+    outline: none;
+}
+
+input::placeholder{
+    color: var(--whitecolor);
+    opacity: 50%;
+    font-weight: 100;
+    font-style: italic;    
+}
+
+#filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    width: 60%;
+
+    /*border: 1px solid black;*/
+}
+
+#filter-selected{
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#todolist{
+    display: flex;
+    width: 50%;
+    height: 100%;
+
+    /*background: var(--whitetransparentcolor);*/
+    
+    /*border: 1px solid black;*/
+    
+    padding: 10px;
+
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 50px;
+}
+
+#orderlist{
+    display: flex;
+    flex-direction: column;
+
+    /*border: 1px solid black;*/
+
+    width: 95%;
+    height: 100%;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.containerlist{
+    /*border: 3px solid black;*/
+    display: flex;
+
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    background-color: var(--darkcolor);
+    opacity: 100%;
+
+    box-shadow: 0 0 20px var(--seconddarkcolor);
+
+    width: 100%;
+    height: 130px;
+
+    transition: 0.3s;
+}
+
+.containerlist h3{
+    /*border:1px solid black;*/
+    flex:1;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 100;
+    
+    color: var(--whitecolor);
+}
+
+.containerlist button {
+    margin-left: 0.4rem;
+    background-color: transparent;
+    
+    border-radius: 10px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: var(--whitecolor);
+    font-family: 'Roboto', sans-serif;
+
+    border: none;
+}
+
+.containerlist.done{
+    background-color: var(--whitetransparentcolor);
+    font-style: italic;
+}
+
+.containerlist.done h3{
+    color: var(--darkcolor);
+    text-decoration: line-through;
+}
+
+.containerlist.done button{
+    color: var(--darkcolor);
+}
